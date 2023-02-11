@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Item {
+public class Item extends BaseEntity {
 
     @Id
     @Column(name = "item_id")
@@ -31,7 +31,5 @@ public class Item {
     private String itemDetail;  // 상품 상세 설명
     @Enumerated(EnumType.STRING)
     private ItemSellStatus itemSellStatus; // 상품 판매 상태
-    private LocalDateTime regTime; // 등록 시간
-    private LocalDateTime updateTime;  // 수정 시간
 
 }
